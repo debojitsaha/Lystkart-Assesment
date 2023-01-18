@@ -246,6 +246,7 @@ span {
   margin-bottom: 100px;
 }
 .testimonials .circle4 {
+  z-index: -1;
   width: 450px;
   height: 450px;
   border-radius: 50%;
