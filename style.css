@@ -28,6 +28,12 @@ span {
     width: 100%;
   }
 }
+@media (max-width: 960px) and (min-width: 451px) {
+  .inputs {
+    display: flex;
+    gap: 10px;
+  }
+}
 .inputs input {
   padding: 9px 18px;
   border-radius: 3px;
@@ -68,6 +74,12 @@ span {
     width: 100vw;
   }
 }
+@media (max-width: 960px) and (min-width: 451px) {
+  .home {
+    width: 100vw;
+    overflow: hidden;
+  }
+}
 .home .icon {
   padding: 20px 60px;
 }
@@ -77,8 +89,20 @@ span {
   border-radius: 50%;
   background: linear-gradient(to bottom, rgb(247, 25, 99), rgb(252, 109, 157));
   position: absolute;
-  right: 580px;
-  top: -45px;
+  right: 40%;
+  top: -11%;
+  z-index: -1;
+}
+@media (max-width: 450px) {
+  .home .circle1 {
+    display: none;
+  }
+}
+@media (max-width: 960px) and (min-width: 451px) {
+  .home .circle1 {
+    right: 0;
+    left: 430px;
+  }
 }
 .home .circle2 {
   width: 80px;
@@ -94,6 +118,11 @@ span {
     display: none;
   }
 }
+@media (max-width: 960px) and (min-width: 451px) {
+  .home .circle2 {
+    display: none;
+  }
+}
 .home .circle3 {
   width: 40px;
   height: 40px;
@@ -102,6 +131,16 @@ span {
   position: absolute;
   right: 525px;
   top: 300px;
+}
+@media (max-width: 450px) {
+  .home .circle3 {
+    display: none;
+  }
+}
+@media (max-width: 960px) and (min-width: 451px) {
+  .home .circle3 {
+    display: none;
+  }
 }
 .home .left {
   margin: 20px;
@@ -118,6 +157,12 @@ span {
     margin-left: 0px;
   }
 }
+@media (max-width: 960px) and (min-width: 451px) {
+  .home .left {
+    width: calc(100vw - 380px);
+    margin-left: 0px;
+  }
+}
 .home .left h1 {
   margin-bottom: 10px;
 }
@@ -131,6 +176,11 @@ span {
 @media (max-width: 450px) {
   .home .right img {
     width: 100vw;
+  }
+}
+@media (max-width: 960px) and (min-width: 451px) {
+  .home .right img {
+    width: 300px;
   }
 }
 
@@ -186,6 +236,11 @@ span {
     width: calc(100vw - 40px);
   }
 }
+@media (max-width: 960px) and (min-width: 451px) {
+  .testimonials {
+    width: calc(100vw - 40px);
+  }
+}
 .testimonials h1 {
   margin-top: 250px;
   margin-bottom: 100px;
@@ -196,8 +251,19 @@ span {
   border-radius: 50%;
   background: linear-gradient(to bottom, rgb(29, 25, 247), rgb(92, 75, 248));
   position: absolute;
-  right: 433px;
+  right: 380px;
   top: 1415px;
+}
+@media (max-width: 450px) {
+  .testimonials .circle4 {
+    display: none;
+  }
+}
+@media (max-width: 960px) and (min-width: 451px) {
+  .testimonials .circle4 {
+    right: 180px;
+    top: 1380px;
+  }
 }
 .testimonials .circle5 {
   width: 40px;
@@ -213,6 +279,12 @@ span {
     display: none;
   }
 }
+@media (max-width: 960px) and (min-width: 451px) {
+  .testimonials .circle5 {
+    left: 10px;
+    top: 1890px;
+  }
+}
 .testimonials .circle6 {
   width: 80px;
   height: 80px;
@@ -225,6 +297,12 @@ span {
 @media (max-width: 450px) {
   .testimonials .circle6 {
     display: none;
+  }
+}
+@media (max-width: 960px) and (min-width: 451px) {
+  .testimonials .circle6 {
+    right: 125px;
+    top: 1750px;
   }
 }
 .testimonials .container {
@@ -254,6 +332,11 @@ span {
   margin: 80px auto;
 }
 @media (max-width: 450px) {
+  .testimonials .container .box {
+    width: 200px;
+  }
+}
+@media (max-width: 960px) and (min-width: 451px) {
   .testimonials .container .box {
     width: 200px;
   }
@@ -290,6 +373,14 @@ span {
   .footer .desc {
     width: 100%;
   }
+}
+@media (max-width: 960px) and (min-width: 451px) {
+  .footer .desc {
+    width: 100%;
+  }
+}
+.footer .inputs {
+  justify-content: center;
 }
 .footer .foot {
   display: flex;

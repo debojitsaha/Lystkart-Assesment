@@ -4,7 +4,7 @@
   margin: 0;
 }
 
-body{
+body {
   width: 100vw;
   overflow-x: hidden;
 }
@@ -22,17 +22,21 @@ span {
   margin-top: 25px;
   gap: 20px;
 
-  @include mobile{
+  @include mobile {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
   }
+  @include tablet {
+    display: flex;
+    gap: 10px;
+  }
 
   input {
     padding: 9px 18px;
     border-radius: 3px;
-    border: 1px solid rgb(201, 200, 200);    
+    border: 1px solid rgb(201, 200, 200);
   }
 
   button {
@@ -66,9 +70,13 @@ span {
   justify-content: space-between;
   margin-bottom: 80px;
 
-  @include mobile{
+  @include mobile {
     flex-direction: column;
     width: 100vw;
+  }
+  @include tablet {
+    width: 100vw;
+    overflow: hidden;
   }
 
   .icon {
@@ -85,8 +93,17 @@ span {
       rgb(252, 109, 157)
     );
     position: absolute;
-    right: 580px;
-    top: -45px;
+    right: 40%;
+    top: -11%;
+    z-index: -1;
+
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      right: 0;
+      left: 430px;
+    }
   }
   .circle2 {
     width: 80px;
@@ -97,7 +114,10 @@ span {
     left: 40px;
     top: 340px;
 
-    @include mobile{
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
       display: none;
     }
   }
@@ -109,6 +129,13 @@ span {
     position: absolute;
     right: 525px;
     top: 300px;
+
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
   }
 
   .left {
@@ -118,10 +145,14 @@ span {
     padding: 30px;
     width: 340px;
 
-    @include mobile{
+    @include mobile {
       display: flex;
       flex-direction: column;
       width: calc(100% - 80px);
+      margin-left: 0px;
+    }
+    @include tablet {
+      width: calc(100vw - 380px);
       margin-left: 0px;
     }
 
@@ -135,8 +166,11 @@ span {
     img {
       width: 500px;
       overflow-x: hidden;
-      @include mobile{
+      @include mobile {
         width: 100vw;
+      }
+      @include tablet {
+        width: 300px;
       }
     }
   }
@@ -147,9 +181,9 @@ span {
   margin-top: 50px;
   margin-bottom: 50px;
   margin: auto;
-  text-align: center;  
+  text-align: center;
 
-  @include mobile{
+  @include mobile {
     width: 250px;
   }
 
@@ -162,7 +196,7 @@ span {
     display: flex;
     gap: 30px;
 
-    @include mobile{
+    @include mobile {
       flex-direction: column;
     }
 
@@ -192,9 +226,12 @@ span {
   background: linear-gradient(rgba(205, 223, 245, 0.623), #fff);
   text-align: center;
 
-    @include mobile{
-      width: calc(100vw - 40px);
-    }
+  @include mobile {
+    width: calc(100vw - 40px);
+  }
+  @include tablet {
+    width: calc(100vw - 40px);
+  }
 
   h1 {
     margin-top: 250px;
@@ -207,8 +244,16 @@ span {
     border-radius: 50%;
     background: linear-gradient(to bottom, rgb(29, 25, 247), rgb(92, 75, 248));
     position: absolute;
-    right: 433px;
+    right: 380px;
     top: 1415px;
+
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      right: 180px;
+      top: 1380px;
+    }
   }
   .circle5 {
     width: 40px;
@@ -222,9 +267,13 @@ span {
     position: absolute;
     left: 118px;
     top: 1816px;
-    
-    @include mobile{
+
+    @include mobile {
       display: none;
+    }
+    @include tablet {
+      left: 10px;
+      top: 1890px;
     }
   }
   .circle6 {
@@ -239,9 +288,13 @@ span {
     position: absolute;
     right: 303px;
     top: 1795px;
-    
-    @include mobile{
+
+    @include mobile {
       display: none;
+    }
+    @include tablet {
+      right: 125px;
+      top: 1750px;
     }
   }
 
@@ -251,9 +304,9 @@ span {
     justify-content: center;
     border-radius: 50%;
     width: 50%;
-    margin: auto;    
+    margin: auto;
 
-    @include mobile{
+    @include mobile {
       flex-direction: column;
       align-items: center;
       width: 100vw;
@@ -271,7 +324,10 @@ span {
       position: relative;
       margin: 80px auto;
 
-      @include mobile{
+      @include mobile {
+        width: 200px;
+      }
+      @include tablet {
         width: 200px;
       }
 
@@ -287,14 +343,14 @@ span {
 }
 
 .footer {
-  background: linear-gradient(rgb(12, 1, 51), rgb(3, 3, 65));  
+  background: linear-gradient(rgb(12, 1, 51), rgb(3, 3, 65));
   padding: 30px 60px;
   margin: 0;
   text-align: center;
   display: block;
   color: white;
 
-  @include mobile{
+  @include mobile {
     width: calc(100vw - 120px);
   }
 
@@ -306,9 +362,16 @@ span {
     width: 550px;
     margin: auto;
 
-    @include mobile{
+    @include mobile {
       width: 100%;
     }
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  .inputs {
+    justify-content: center;
   }
 
   .foot {
@@ -316,7 +379,7 @@ span {
     justify-content: space-between;
     margin-top: 80px;
 
-    @include mobile{
+    @include mobile {
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -336,7 +399,7 @@ span {
         width: 30px;
         height: 30px;
 
-        @include mobile{
+        @include mobile {
           margin: auto;
           justify-content: center;
           align-items: center;
@@ -354,7 +417,7 @@ span {
         justify-content: flex-end;
         gap: 30px;
 
-        @include mobile{
+        @include mobile {
           justify-content: center;
           align-items: center;
           gap: 20px;
