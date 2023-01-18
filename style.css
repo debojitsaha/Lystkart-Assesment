@@ -246,7 +246,6 @@ span {
   margin-bottom: 100px;
 }
 .testimonials .circle4 {
-  z-index: -1;
   width: 450px;
   height: 450px;
   border-radius: 50%;
@@ -264,6 +263,7 @@ span {
   .testimonials .circle4 {
     right: 180px;
     top: 1380px;
+    z-index: -1;
   }
 }
 .testimonials .circle5 {

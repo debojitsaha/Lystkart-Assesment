@@ -239,7 +239,6 @@ span {
   }
 
   .circle4 {
-    z-index: -1;
     width: 450px;
     height: 450px;
     border-radius: 50%;
@@ -254,6 +253,7 @@ span {
     @include tablet {
       right: 180px;
       top: 1380px;
+      z-index: -1;
     }
   }
   .circle5 {
