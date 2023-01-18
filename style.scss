@@ -1,5 +1,12 @@
+@import "./breakpoints.scss";
+
 * {
   margin: 0;
+}
+
+body{
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 *:focus {
@@ -13,12 +20,19 @@ span {
 
 .inputs {
   margin-top: 25px;
+  gap: 20px;
+
+  @include mobile{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
 
   input {
-    margin-right: 10px;
     padding: 9px 18px;
-    border: 1px solid rgb(201, 200, 200);
     border-radius: 3px;
+    border: 1px solid rgb(201, 200, 200);    
   }
 
   button {
@@ -52,6 +66,11 @@ span {
   justify-content: space-between;
   margin-bottom: 80px;
 
+  @include mobile{
+    flex-direction: column;
+    width: 100vw;
+  }
+
   .icon {
     padding: 20px 60px;
   }
@@ -77,6 +96,10 @@ span {
     position: absolute;
     left: 40px;
     top: 340px;
+
+    @include mobile{
+      display: none;
+    }
   }
   .circle3 {
     width: 40px;
@@ -95,6 +118,13 @@ span {
     padding: 30px;
     width: 340px;
 
+    @include mobile{
+      display: flex;
+      flex-direction: column;
+      width: calc(100% - 80px);
+      margin-left: 0px;
+    }
+
     h1 {
       margin-bottom: 10px;
     }
@@ -104,6 +134,10 @@ span {
     margin-top: 40px;
     img {
       width: 500px;
+      overflow-x: hidden;
+      @include mobile{
+        width: 100vw;
+      }
     }
   }
 }
@@ -113,7 +147,11 @@ span {
   margin-top: 50px;
   margin-bottom: 50px;
   margin: auto;
-  text-align: center;
+  text-align: center;  
+
+  @include mobile{
+    width: 250px;
+  }
 
   span {
     color: gray;
@@ -123,6 +161,10 @@ span {
   .container {
     display: flex;
     gap: 30px;
+
+    @include mobile{
+      flex-direction: column;
+    }
 
     .line2 {
       transform: translateY(50px);
@@ -150,6 +192,10 @@ span {
   background: linear-gradient(rgba(205, 223, 245, 0.623), #fff);
   text-align: center;
 
+    @include mobile{
+      width: calc(100vw - 40px);
+    }
+
   h1 {
     margin-top: 250px;
     margin-bottom: 100px;
@@ -176,6 +222,10 @@ span {
     position: absolute;
     left: 118px;
     top: 1816px;
+    
+    @include mobile{
+      display: none;
+    }
   }
   .circle6 {
     width: 80px;
@@ -189,6 +239,10 @@ span {
     position: absolute;
     right: 303px;
     top: 1795px;
+    
+    @include mobile{
+      display: none;
+    }
   }
 
   .container {
@@ -197,7 +251,15 @@ span {
     justify-content: center;
     border-radius: 50%;
     width: 50%;
-    margin: auto;
+    margin: auto;    
+
+    @include mobile{
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      position: relative;
+      left: -20px;
+    }
 
     .line1 {
       transform: translateY(50px);
@@ -208,6 +270,10 @@ span {
       padding: 30px 60px;
       position: relative;
       margin: 80px auto;
+
+      @include mobile{
+        width: 200px;
+      }
 
       img {
         width: 50px;
@@ -221,28 +287,41 @@ span {
 }
 
 .footer {
-  background: linear-gradient(rgb(12, 1, 51), rgb(3, 3, 65));
-  height: 300px;
+  background: linear-gradient(rgb(12, 1, 51), rgb(3, 3, 65));  
   padding: 30px 60px;
   margin: 0;
   text-align: center;
   display: block;
   color: white;
 
+  @include mobile{
+    width: calc(100vw - 120px);
+  }
+
   h1 {
-    color: white;
     margin-bottom: 20px;
   }
 
   .desc {
     width: 550px;
     margin: auto;
+
+    @include mobile{
+      width: 100%;
+    }
   }
 
   .foot {
     display: flex;
     justify-content: space-between;
     margin-top: 80px;
+
+    @include mobile{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
 
     span {
       font-size: 14px;
@@ -256,6 +335,13 @@ span {
       img {
         width: 30px;
         height: 30px;
+
+        @include mobile{
+          margin: auto;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+        }
       }
     }
     .right {
@@ -267,6 +353,12 @@ span {
         display: flex;
         justify-content: flex-end;
         gap: 30px;
+
+        @include mobile{
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+        }
       }
       .labels {
         display: flex;
@@ -274,9 +366,5 @@ span {
         gap: 20px;
       }
     }
-  }
-
-  img {
-    width: 20px;
   }
 }
